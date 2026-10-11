@@ -243,3 +243,68 @@ if (gallery) {
     });
   }
 }
+
+const menuSection = document.querySelector(".menu-section");
+if (menuSection) {
+  const menuSliderElement = menuSection.querySelector(".menu-slider");
+  const menuControls = menuSection.querySelector(".menu-controls");
+  const menuSwiper = window.Swiper && menuSliderElement
+    ? new window.Swiper(menuSliderElement, {
+        slidesPerView: 1,
+        spaceBetween: 18,
+        speed: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 550,
+        grabCursor: true,
+        rewind: true,
+        watchOverflow: true,
+        keyboard: { enabled: true, onlyInViewport: true },
+        navigation: {
+          nextEl: menuSection.querySelector(".menu-button-next"),
+          prevEl: menuSection.querySelector(".menu-button-prev"),
+        },
+        pagination: {
+          el: menuSection.querySelector(".menu-pagination"),
+          clickable: true,
+          bulletElement: "button",
+        },
+        breakpoints: {
+          680: { slidesPerView: 2, spaceBetween: 22 },
+          1024: { slidesPerView: 3, spaceBetween: 24 },
+        },
+      })
+    : null;
+
+  const menuFilters = [...menuSection.querySelectorAll("[data-menu-filter]")];
+  const menuItems = [...menuSection.querySelectorAll(".menu-item")];
+
+  menuFilters.forEach((button) => {
+    button.addEventListener("click", () => {
+      const type = button.dataset.menuFilter;
+      let visibleCount = 0;
+
+      menuFilters.forEach((filter) => {
+        const active = filter === button;
+        filter.classList.toggle("is-active", active);
+        filter.setAttribute("aria-pressed", String(active));
+      });
+
+      menuItems.forEach((item) => {
+        const visible = type === "all" || item.dataset.menuType === type;
+        item.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+
+      if (menuSliderElement) menuSliderElement.hidden = visibleCount === 0;
+      if (menuControls) menuControls.hidden = visibleCount < 2;
+      menuSwiper?.update();
+      menuSwiper?.slideTo(0, 0);
+    });
+  });
+
+  menuSwiper?.on("slideChange", () => {
+    const visibleItems = menuItems.filter((item) => !item.hidden);
+    visibleItems.forEach((item, index) => {
+      item.setAttribute("aria-label", `Pizza ${index + 1} of ${visibleItems.length}`);
+      item.setAttribute("aria-roledescription", "slide");
+    });
+  });
+}

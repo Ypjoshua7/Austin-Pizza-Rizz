@@ -69,6 +69,7 @@
           </div>
           <div class="about-details">
             <h2 class="section-title">A Little About Us</h2>
+            <p class="about-subtitle">Neighborhood pizza, made with care in North Austin.</p>
             <p class="text">Austin Pizza Rizz is a small, home-based pizza business in North Austin, near The Domain. We make homemade pizzas for neighbors looking for an easy, satisfying meal. Check in before ordering for current flavors, availability, and pickup details.</p>
             <a href="about.html" class="about-link">More about us</a>
           </div>
@@ -76,53 +77,111 @@
       </section>
       <!-- Menu section -->
       <section class="menu-section" id="menu">
-        <h2 class="section-title">Homemade Pizza Menu</h2>
-        <div class="section-content">
-          <ul class="menu-list">
-            <li class="menu-item">
+        <div class="menu-particles" aria-hidden="true">
+          <span>✦</span><span>·</span><span>✧</span><span>·</span><span>✦</span><span>·</span><span>✧</span><span>·</span>
+        </div>
+        <div class="section-content menu-content">
+          <header class="menu-heading">
+            <p class="menu-eyebrow">FRESH FROM OUR KITCHEN</p>
+            <h2 class="section-title">Menu</h2>
+            <p class="menu-subtitle">Explore our homemade pizzas, choose a size, and order your favorite.</p>
+            <ol class="menu-purchase-steps" aria-label="How to purchase">
+              <li><span>1</span>Choose a pizza type above.</li>
+              <li><span>2</span>Select Small, Medium, or Large.</li>
+              <li><span>3</span>Click its Order button and complete checkout in our Beacons shop.</li>
+            </ol>
+          </header>
+          <div class="menu-filters" role="group" aria-label="Filter menu by pizza type">
+            <button class="menu-filter is-active" type="button" data-menu-filter="all" aria-pressed="true">All Pizzas</button>
+            <button class="menu-filter" type="button" data-menu-filter="pepperoni" aria-pressed="false">Pepperoni</button>
+            <button class="menu-filter" type="button" data-menu-filter="spinach" aria-pressed="false">Spinach &amp; Cheese</button>
+            <button class="menu-filter" type="button" data-menu-filter="classic" aria-pressed="false">Classic Cheese</button>
+            <button class="menu-filter" type="button" data-menu-filter="custom" aria-pressed="false">Build Your Own</button>
+            <button class="menu-filter" type="button" data-menu-filter="veggie" aria-pressed="false">Veggie</button>
+            <button class="menu-filter" type="button" data-menu-filter="table" aria-pressed="false">For the Table</button>
+          </div>
+          <div class="menu-slider swiper" aria-label="Browse homemade pizzas">
+          <ul class="menu-list swiper-wrapper">
+            <li class="menu-item swiper-slide" data-menu-type="pepperoni">
               <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
               <div class="menu-details">
                 <h3 class="name">Pepperoni Three-Cheese</h3>
                 <p class="text">Pepperoni and three cheeses on a homemade pizza.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Pepperoni Three-Cheese pizza">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Pepperoni Three-Cheese pizza">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Pepperoni Three-Cheese pizza">Order</a></li>
+                </ul>
               </div>
             </li>
-            <li class="menu-item">
+            <li class="menu-item swiper-slide" data-menu-type="spinach">
               <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
               <div class="menu-details">
                 <h3 class="name">Spinach &amp; Cheese</h3>
                 <p class="text">A savory spinach-and-cheese pizza for a meat-free option.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Spinach and Cheese pizza">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Spinach and Cheese pizza">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Spinach and Cheese pizza">Order</a></li>
+                </ul>
               </div>
             </li>
-            <li class="menu-item">
+            <li class="menu-item swiper-slide" data-menu-type="classic">
               <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
               <div class="menu-details">
                 <h3 class="name">Classic Cheese</h3>
                 <p class="text">A simple, comforting cheese pizza made for sharing.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Classic Cheese pizza">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Classic Cheese pizza">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Classic Cheese pizza">Order</a></li>
+                </ul>
               </div>
             </li>
-            <li class="menu-item">
+            <li class="menu-item swiper-slide" data-menu-type="custom">
               <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
               <div class="menu-details">
                 <h3 class="name">Build Your Own</h3>
                 <p class="text">Ask about topping choices and make your pizza your own.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Build Your Own pizza">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Build Your Own pizza">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Build Your Own pizza">Order</a></li>
+                </ul>
               </div>
             </li>
-            <li class="menu-item">
+            <li class="menu-item swiper-slide" data-menu-type="veggie">
               <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
               <div class="menu-details">
                 <h3 class="name">Veggie Pizza</h3>
                 <p class="text">A colorful veggie-topped option. Ask about available toppings.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Veggie Pizza">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Veggie Pizza">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Veggie Pizza">Order</a></li>
+                </ul>
               </div>
             </li>
-            <li class="menu-item">
+            <li class="menu-item swiper-slide" data-menu-type="table">
               <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
               <div class="menu-details">
                 <h3 class="name">Pizza for the Table</h3>
                 <p class="text">Planning a get-together? Ask about larger orders and timing.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Pizza for the Table">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Pizza for the Table">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Pizza for the Table">Order</a></li>
+                </ul>
               </div>
             </li>
           </ul>
-          <p class="menu-note">Menu, prices, toppings, and pickup availability may vary. Please confirm details before ordering.</p>
+          </div>
+          <div class="menu-controls" aria-label="Pizza menu controls">
+            <button class="menu-nav-button menu-button-prev" type="button" aria-label="Previous pizzas">←</button>
+            <div class="menu-pagination" aria-label="Choose a pizza slide"></div>
+            <button class="menu-nav-button menu-button-next" type="button" aria-label="Next pizzas">→</button>
+          </div>
+          <p class="menu-note">Toppings and pickup availability may vary. Please confirm details before ordering.</p>
           <div class="menu-order-link">
             <a href="#contact" class="button">Ask About an Order</a>
           </div>
@@ -130,7 +189,10 @@
       </section>
       <!-- Brand highlights -->
       <section class="testimonials-section" id="testimonials">
-        <h2 class="section-title">The Austin Pizza Rizz Difference</h2>
+        <header class="testimonials-heading">
+          <h2 class="section-title">The Austin Pizza Rizz Difference</h2>
+          <p class="section-subtitle">Homemade flavor and personal service, right here in our neighborhood.</p>
+        </header>
         <div class="section-content">
           <div class="slider-container swiper">
             <div class="slider-wrapper">
@@ -240,7 +302,10 @@
       </section>
       <!-- Contact section -->
       <section class="contact-section" id="contact">
-        <h2 class="section-title">Contact Us</h2>
+        <header class="contact-heading">
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-subtitle">Questions or ready to order? Send us a message about your pizza and preferred pickup.</p>
+        </header>
         <div class="section-content">
           <ul class="contact-info-list">
             <li class="contact-info">

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#D62828">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Austin Pizza Rizz makes homemade pizza in North Austin near The Domain. Explore the menu and ask about availability." />
+    <meta name="theme-color" content="#3b141c" />
+    <title>Austin Pizza Rizz | Homemade Pizza in North Austin</title>
+    <!-- Favicon png logo -->
+    <link rel="icon" type="image/png" href="favicon/fav-AustinPizzaRizzLogo.fav">
+    <link rel="stylesheet" href="style.css?v=3" />
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header>
+      <nav class="navbar">
+        <a href="#home" class="nav-logo">
+          <h2 class="logo-text">Austin Pizza Rizz</h2>
+        </a>
+        <ul class="nav-menu">
+          <button id="menu-close-button" type="button" aria-label="Close navigation menu">×</button>
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#menu" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="#testimonials" class="nav-link">Why Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#gallery" class="nav-link">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <button id="menu-open-button" type="button" aria-label="Open navigation menu">☰</button>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero section -->
+      <section class="hero-section" id="home">
+        <video
+          class="hero-video"
+          src="videos/hero-marketing-video.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+          tabindex="-1"
+        ></video>
+        <div class="section-content">
+          <div class="hero-details">
+            <h2 class="title">Austin Pizza Rizz</h2>
+            <h3 class="subtitle">Homemade pizza, made with Austin flavor.</h3>
+            <p class="description">A home-based pizza business serving North Austin and the Domain area. Find a favorite, then get in touch to ask about today's menu and availability.</p>
+            <div class="buttons">
+              <a href="#menu" class="button order-now">Explore the Menu</a>
+              <a href="#contact" class="button contact-us">Order Inquiry</a>
+            </div>
+          </div>
+          <div class="hero-image-wrapper">
+            <img src="images/Austin Pizza Rizz.png" alt="Pepperoni and three-cheese pizza" class="hero-image" />
+          </div>
+        </div>
+      </section>
+      <!-- About section -->
+      <section class="about-section" id="about">
+        <div class="section-content">
+          <div class="about-image-wrapper">
+            <img src="images/Austin Pizza Rizz.png" alt="Pepperoni and three-cheese pizza" class="about-image" />
+          </div>
+          <div class="about-details">
+            <h2 class="section-title">A Little About Us</h2>
+            <p class="about-subtitle">Neighborhood pizza, made with care in North Austin.</p>
+            <p class="text">Austin Pizza Rizz is a small, home-based pizza business in North Austin, near The Domain. We make homemade pizzas for neighbors looking for an easy, satisfying meal. Check in before ordering for current flavors, availability, and pickup details.</p>
+            <a href="about.html" class="about-link">More about us</a>
+            <div class="about-social">
+              <h3>Follow Austin Pizza Rizz</h3>
+              <div class="about-social-links">
+                <a href="https://www.facebook.com/profile.php?id=61594944796176" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Menu section -->
+      <section class="menu-section" id="menu">
+        <div class="menu-particles" aria-hidden="true">
+          <span>✦</span><span>·</span><span>✧</span><span>·</span><span>✦</span><span>·</span><span>✧</span><span>·</span>
+        </div>
+        <div class="section-content menu-content">
+          <header class="menu-heading">
+            <p class="menu-eyebrow">FRESH FROM OUR KITCHEN</p>
+            <h2 class="section-title">Menu</h2>
+            <p class="menu-subtitle">Explore our homemade pizzas, choose a size, and order your favorite.</p>
+            <ol class="menu-purchase-steps" aria-label="How to purchase">
+              <li><span>1</span>Choose a pizza type above.</li>
+              <li><span>2</span>Select Small, Medium, or Large.</li>
+              <li><span>3</span>Click its Order button and complete checkout in our Beacons shop.</li>
+            </ol>
+          </header>
+          <div class="menu-filters" role="group" aria-label="Filter menu by pizza type">
+            <button class="menu-filter is-active" type="button" data-menu-filter="all" aria-pressed="true">All Pizzas</button>
+            <button class="menu-filter" type="button" data-menu-filter="pepperoni" aria-pressed="false">Pepperoni</button>
+            <button class="menu-filter" type="button" data-menu-filter="spinach" aria-pressed="false">Spinach &amp; Cheese</button>
+            <button class="menu-filter" type="button" data-menu-filter="classic" aria-pressed="false">Classic Cheese</button>
+            <button class="menu-filter" type="button" data-menu-filter="custom" aria-pressed="false">Build Your Own</button>
+            <button class="menu-filter" type="button" data-menu-filter="veggie" aria-pressed="false">Veggie</button>
+            <button class="menu-filter" type="button" data-menu-filter="table" aria-pressed="false">For the Table</button>
+          </div>
+          <div class="menu-slider" aria-label="Browse homemade pizzas">
+          <ul class="menu-list">
+            <li class="menu-item" data-menu-type="pepperoni">
+              <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
+              <div class="menu-details">
+                <h3 class="name">Pepperoni Three-Cheese</h3>
+                <p class="text">Pepperoni and three cheeses on a homemade pizza.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Pepperoni Three-Cheese pizza">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Pepperoni Three-Cheese pizza">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Pepperoni Three-Cheese pizza">Order</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item" data-menu-type="spinach">
+              <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
+              <div class="menu-details">
+                <h3 class="name">Spinach &amp; Cheese</h3>
+                <p class="text">A savory spinach-and-cheese pizza for a meat-free option.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Spinach and Cheese pizza">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Spinach and Cheese pizza">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Spinach and Cheese pizza">Order</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item" data-menu-type="classic">
+              <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
+              <div class="menu-details">
+                <h3 class="name">Classic Cheese</h3>
+                <p class="text">A simple, comforting cheese pizza made for sharing.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Classic Cheese pizza">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Classic Cheese pizza">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Classic Cheese pizza">Order</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item" data-menu-type="custom">
+              <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
+              <div class="menu-details">
+                <h3 class="name">Build Your Own</h3>
+                <p class="text">Ask about topping choices and make your pizza your own.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Build Your Own pizza">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Build Your Own pizza">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Build Your Own pizza">Order</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item" data-menu-type="veggie">
+              <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
+              <div class="menu-details">
+                <h3 class="name">Veggie Pizza</h3>
+                <p class="text">A colorful veggie-topped option. Ask about available toppings.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Veggie Pizza">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Veggie Pizza">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Veggie Pizza">Order</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu-item" data-menu-type="table">
+              <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="menu-image" />
+              <div class="menu-details">
+                <h3 class="name">Pizza for the Table</h3>
+                <p class="text">Planning a get-together? Ask about larger orders and timing.</p>
+                <ul class="menu-prices" aria-label="Sizes and prices">
+                  <li><span>Small</span><strong>$6.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a small Pizza for the Table">Order</a></li>
+                  <li><span>Medium</span><strong>$9.95</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a medium Pizza for the Table">Order</a></li>
+                  <li><span>Large</span><strong>$15.99</strong><a class="menu-buy-button" href="https://shop.beacons.ai/ypjoshua7/7968d7c6-4bbc-4826-ad96-1d2e207ee861" target="_blank" rel="noopener noreferrer" aria-label="Order a large Pizza for the Table">Order</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          </div>
+          <p class="menu-note">Toppings and pickup availability may vary. Please confirm details before ordering.</p>
+          <div class="menu-order-link">
+            <a href="#contact" class="button">Ask About an Order</a>
+          </div>
+        </div>
+      </section>
+      <!-- Customer testimonials -->
+      <section class="testimonials-section" id="testimonials">
+        <header class="testimonials-heading">
+          <h2 class="section-title">What Our Customers Are Saying</h2>
+          <p class="section-subtitle">Seven pizza fans share why Austin Pizza Rizz stands out from pies across Austin and beyond.</p>
+        </header>
+        <div class="section-content">
+          <div class="testimonials-carousel" role="region" aria-roledescription="carousel" aria-label="Customer testimonials">
+            <div class="testimonials-viewport" id="testimonials-viewport">
+              <ul class="testimonials-list" id="testimonials-track">
+                <li class="testimonial">
+                  <p class="testimonial-rating"><span role="img" aria-label="5 out of 5 stars">★★★★★</span></p>
+                  <h3 class="name">Maria Gonzalez</h3>
+                  <p class="testimonial-order">Ordered 2 pizza boxes</p>
+                  <blockquote class="feedback">Austin Pizza Rizz served the most delicious pizza I've ever had. The crust was perfectly baked, the ingredients tasted incredibly fresh, and every slice was packed with flavor. My family finished both boxes in no time. We're already planning our next order and can't wait to try it again!</blockquote>
+                </li>
+                <li class="testimonial">
+                  <p class="testimonial-rating"><span role="img" aria-label="5 out of 5 stars">★★★★★</span></p>
+                  <h3 class="name">Raj Patel</h3>
+                  <p class="testimonial-order">Ordered 1 pizza box</p>
+                  <blockquote class="feedback">I've tried pizza from many different places, but nothing compares to Austin Pizza Rizz. The homemade quality really stands out, and the flavor was better than any pizza I've had before. I only ordered one box to try it out, but next time I'll definitely be ordering more.</blockquote>
+                </li>
+                <li class="testimonial">
+                  <p class="testimonial-rating"><span role="img" aria-label="5 out of 5 stars">★★★★★</span></p>
+                  <h3 class="name">Mei Chen</h3>
+                  <p class="testimonial-order">Ordered 3 pizza boxes</p>
+                  <blockquote class="feedback">This pizza completely exceeded my expectations. The cheese, sauce, and crust were perfectly balanced, and every bite was amazing. My guests kept asking where I got it from. It was honestly the best pizza I've ever tasted, and I can't wait to order again.</blockquote>
+                </li>
+                <li class="testimonial">
+                  <p class="testimonial-rating"><span role="img" aria-label="5 out of 5 stars">★★★★★</span></p>
+                  <h3 class="name">Ahmed Hassan</h3>
+                  <p class="testimonial-order">Ordered 2 pizza boxes</p>
+                  <blockquote class="feedback">I was blown away by how fresh and flavorful everything tasted. You can tell a lot of care goes into every pizza. It was better than any pizza I've had from big-name chains or local shops. I'll definitely be coming back for another order soon.</blockquote>
+                </li>
+                <li class="testimonial">
+                  <p class="testimonial-rating"><span role="img" aria-label="5 out of 5 stars">★★★★★</span></p>
+                  <h3 class="name">Sofia Martinez</h3>
+                  <p class="testimonial-order">Ordered 1 pizza box</p>
+                  <blockquote class="feedback">I ordered a single box just to give it a try, and now I'm hooked. The crust had the perfect texture, the toppings were generous, and the flavor was incredible. It was hands down the best pizza I've ever had. I'll be ordering again very soon.</blockquote>
+                </li>
+                <li class="testimonial">
+                  <p class="testimonial-rating"><span role="img" aria-label="5 out of 5 stars">★★★★★</span></p>
+                  <h3 class="name">David Kim</h3>
+                  <p class="testimonial-order">Ordered 3 pizza boxes</p>
+                  <blockquote class="feedback">Austin Pizza Rizz made our family movie night unforgettable. Everyone loved the pizza, and there wasn't a single slice left. The taste was far better than any pizza we've had before. Next time we're excited to try some different topping combinations.</blockquote>
+                </li>
+                <li class="testimonial">
+                  <p class="testimonial-rating"><span role="img" aria-label="5 out of 5 stars">★★★★★</span></p>
+                  <h3 class="name">Elena Petrova</h3>
+                  <p class="testimonial-order">Ordered 2 pizza boxes</p>
+                  <blockquote class="feedback">The pizza was absolutely outstanding. The ingredients tasted fresh, the crust was perfect, and the overall quality was exceptional. I've eaten pizza all over the country, and this ranks as the best I've ever had. I'm already looking forward to placing another order.</blockquote>
+                </li>
+              </ul>
+            </div>
+            <div class="testimonials-controls">
+              <button class="testimonial-control" type="button" data-testimonials-previous aria-label="Previous testimonials">←</button>
+              <button class="testimonial-control testimonials-toggle" type="button" data-testimonials-toggle aria-label="Pause automatic testimonials">Pause</button>
+              <button class="testimonial-control" type="button" data-testimonials-next aria-label="Next testimonials">→</button>
+            </div>
+            <p class="testimonials-swipe-hint">Swipe or use the arrows to see more reviews</p>
+          </div>
+        </div>
+      </section>
+      <!-- Gallery section -->
+      <section class="gallery-section" id="gallery">
+        <div class="gallery-particles" aria-hidden="true">
+          <span>✦</span><span>·</span><span>✧</span><span>·</span><span>✦</span><span>·</span><span>✧</span><span>·</span>
+        </div>
+        <div class="section-content gallery-content">
+          <header class="gallery-heading">
+            <p class="gallery-eyebrow">STRAIGHT FROM OUR OVEN</p>
+            <h2 class="section-title">Our Gallery</h2>
+            <p class="gallery-subtitle">Fresh daily. Made with Austin love.</p>
+          </header>
+          <div class="gallery-filters" role="group" aria-label="Filter gallery by category">
+            <button class="gallery-filter is-active" type="button" data-gallery-filter="all" aria-pressed="true">All</button>
+            <button class="gallery-filter" type="button" data-gallery-filter="pizza" aria-pressed="false">Pizza</button>
+            <button class="gallery-filter" type="button" data-gallery-filter="pasta" aria-pressed="false">Pasta</button>
+            <button class="gallery-filter" type="button" data-gallery-filter="desserts" aria-pressed="false">Desserts</button>
+          </div>
+          <p class="gallery-empty" role="status" hidden>We’re currently focused on homemade pizza. Check back for pasta and dessert additions!</p>
+          <div class="gallery-slider" aria-label="Pizza gallery">
+          <div class="gallery-list">
+            <article class="gallery-item" data-category="pizza">
+              <button class="gallery-card" type="button" data-full-image="images/pizza- Pepperoni-three-cheeses.png" data-image-alt="Pepperoni and three-cheese pizza" aria-label="View pepperoni three-cheese pizza full screen">
+                <span class="gallery-image-wrap"><img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="gallery-image" loading="lazy" /></span>
+                <span class="gallery-popular">MOST POPULAR</span>
+                <span class="gallery-rating"><span aria-hidden="true">★★★★★</span><small>HOUSE FAVORITE</small></span>
+                <span class="gallery-card-info"><span class="gallery-category-label">PIZZA · HOUSE SPECIAL</span><strong>Three-Cheese Pepperoni</strong><span>Golden crust. Big Austin flavor.</span></span>
+              </button>
+            </article>
+            <article class="gallery-item" data-category="pizza">
+              <button class="gallery-card" type="button" data-full-image="images/pizza-with-cheese-and-spinach.png" data-image-alt="Homemade spinach and cheese pizza" aria-label="View spinach and cheese pizza full screen">
+                <span class="gallery-image-wrap"><img src="images/pizza-with-cheese-and-spinach.png" alt="Homemade spinach and cheese pizza" class="gallery-image" loading="lazy" /></span>
+                <span class="gallery-rating"><span aria-hidden="true">★★★★★</span><small>GARDEN STYLE</small></span>
+                <span class="gallery-card-info"><span class="gallery-category-label">PIZZA · GARDEN STYLE</span><strong>Spinach &amp; Cheese</strong><span>A savory veggie-forward favorite.</span></span>
+              </button>
+            </article>
+            <article class="gallery-item" data-category="pizza">
+              <button class="gallery-card" type="button" data-full-image="images/vegetable-italian-delicious-pizza-slice-png.png" data-image-alt="Italian-style vegetable pizza" aria-label="View Italian-style vegetable pizza full screen">
+                <span class="gallery-image-wrap"><img src="images/vegetable-italian-delicious-pizza-slice-png.png" alt="Italian-style vegetable pizza" class="gallery-image" loading="lazy" /></span>
+                <span class="gallery-rating"><span aria-hidden="true">★★★★★</span><small>VEGGIE PICK</small></span>
+                <span class="gallery-card-info"><span class="gallery-category-label">PIZZA · VEGETABLE</span><strong>Italian Garden Pizza</strong><span>A colorful vegetable-topped slice.</span></span>
+              </button>
+            </article>
+            <article class="gallery-item" data-category="pizza">
+              <button class="gallery-card" type="button" data-full-image="images/pizza-with-cheese-and-toppings-in-4k-transparency-png.png" data-image-alt="Cheese pizza with assorted toppings" aria-label="View cheese pizza with assorted toppings full screen">
+                <span class="gallery-image-wrap"><img src="images/pizza-with-cheese-and-toppings-in-4k-transparency-png.png" alt="Cheese pizza with assorted toppings" class="gallery-image" loading="lazy" /></span>
+                <span class="gallery-rating"><span aria-hidden="true">★★★★★</span><small>LOADED WITH FLAVOR</small></span>
+                <span class="gallery-card-info"><span class="gallery-category-label">PIZZA · ASSORTED TOPPINGS</span><strong>Loaded Toppings Pie</strong><span>Cheese and a little bit of everything.</span></span>
+              </button>
+            </article>
+            <article class="gallery-item" data-category="pizza">
+              <button class="gallery-card" type="button" data-full-image="images/pizza-cheese-pepperoni- Cilantro-png.png" data-image-alt="Pepperoni pizza with cilantro" aria-label="View pepperoni and cilantro pizza full screen">
+                <span class="gallery-image-wrap"><img src="images/pizza-cheese-pepperoni- Cilantro-png.png" alt="Pepperoni pizza with cilantro" class="gallery-image" loading="lazy" /></span>
+                <span class="gallery-rating"><span aria-hidden="true">★★★★★</span><small>BOLD &amp; FRESH</small></span>
+                <span class="gallery-card-info"><span class="gallery-category-label">PIZZA · PEPPERONI</span><strong>Pepperoni &amp; Cilantro</strong><span>A fresh herb twist on a classic.</span></span>
+              </button>
+            </article>
+          </div>
+          </div>
+          <dialog class="gallery-modal" id="gallery-modal" aria-label="Pizza image viewer">
+            <button class="gallery-modal-close" type="button" aria-label="Close image viewer">×</button>
+            <img class="gallery-modal-image" src="" alt="" />
+            <p class="gallery-modal-caption"></p>
+          </dialog>
+        </div>
+      </section>
+      <!-- Contact section -->
+      <section class="contact-section" id="contact">
+        <header class="contact-heading">
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-subtitle">Questions or ready to order? Send us a message about your pizza and preferred pickup.</p>
+        </header>
+        <div class="section-content">
+          <ul class="contact-info-list">
+            <li class="contact-info">
+              <span aria-hidden="true">Location</span>
+              <p><a href="https://www.google.com/maps/search/?api=1&amp;query=4305+Acropolis+Court+Apartment+D+Austin+TX+78759" target="_blank" rel="noopener noreferrer">4305 Acropolis Court, Apt. D<br />Austin, TX 78759</a></p>
+            </li>
+            <li class="contact-info">
+              <span aria-hidden="true">Hours</span>
+              <p>Home-based business. Please confirm order and pickup arrangements before visiting.</p>
+            </li>
+          </ul>
+          <form class="contact-form" id="order-inquiry-form" aria-describedby="order-form-note">
+            <label class="sr-only" for="order-name">Your name</label>
+            <input id="order-name" name="name" type="text" placeholder="Your name" class="form-input" autocomplete="name" required />
+
+            <label class="sr-only" for="order-email">Your email</label>
+            <input id="order-email" name="email" type="email" placeholder="Your email" class="form-input" autocomplete="email" required />
+
+            <label class="sr-only" for="order-phone">Your phone number</label>
+            <input id="order-phone" name="phone" type="tel" placeholder="Your phone number" class="form-input" autocomplete="tel" required />
+
+            <label class="sr-only" for="order-message">Order description</label>
+            <textarea id="order-message" name="message" placeholder="Tell us what pizza you want and any order details." class="form-input" required></textarea>
+
+            <button type="submit" class="button submit-button">Send on WhatsApp</button>
+            <p class="form-note" id="order-form-note">Your message will be sent to WhatsApp number 956-792-2971.</p>
+          </form>
+        </div>
+      </section>
+      <!-- Footer section -->
+      <footer class="footer-section">
+        <div class="section-content footer-content">
+          <div class="footer-brand">
+            <a href="#home" class="footer-logo">🍕 Austin Pizza Rizz</a>
+            <p>Homemade pizza in North Austin, near The Domain.</p>
+          </div>
+          <nav class="footer-navigation" aria-label="Footer navigation">
+            <h2>Explore</h2>
+            <a href="#home">Home</a>
+            <a href="#about">Our Story</a>
+            <a href="#menu">Pizza Menu</a>
+            <a href="#testimonials">Why Austin Pizza Rizz</a>
+            <a href="#gallery">Pizza Gallery</a>
+            <a href="#contact">Order Inquiry</a>
+            <a href="pay-hero.html">Thank You</a>
+          </nav>
+          <div class="footer-contact">
+            <h2>Visit / Contact</h2>
+            <a href="contact.html">Location &amp; pickup information</a>
+            <a href="about.html">About Austin Pizza Rizz</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=4305+Acropolis+Court+Apartment+D+Austin+TX+78759" target="_blank" rel="noopener noreferrer">
+              <span aria-hidden="true">Map:</span>
+              4305 Acropolis Court, Apt. D<br />Austin, TX 78759
+            </a>
+            <p>Home-based business. Please confirm pickup details before visiting.</p>
+          </div>
+          <div class="footer-social">
+            <h2>Follow Us</h2>
+            <div class="footer-social-links">
+              <a href="https://www.facebook.com/profile.php?id=61594944796176" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p class="copyright-text">© 2026 Austin Pizza Rizz. All rights reserved.</p>
+            <a href="#home" class="back-to-top">Back to top ↑</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="main.js?v=2"></script>
+  </body>
+</html>

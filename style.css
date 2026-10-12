@@ -1461,6 +1461,36 @@ header .navbar {
 }
 /* Responsive media query code for max width 640px */
 @media screen and (max-width: 640px) {
+  .founder-feature {
+    display: block;
+  }
+  .founder-feature__image-wrap {
+    display: block;
+    float: left;
+    width: min(35%, 140px);
+    margin: 0 14px 12px 0;
+  }
+  .founder-feature__image-wrap img {
+    width: 100%;
+  }
+  .founder-feature__content {
+    display: block;
+    max-width: none;
+  }
+  .founder-feature__eyebrow {
+    margin-bottom: 8px;
+  }
+  .founder-feature__content .section-title {
+    font-size: clamp(1.3rem, 5vw, 1.7rem);
+    padding-bottom: 14px;
+  }
+  .founder-feature__content .text {
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+  .founder-feature__content blockquote {
+    clear: both;
+  }
   .testimonials-section .slider-wrapper {
     margin: 0 0 30px;
   }

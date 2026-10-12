@@ -1,55 +1,32 @@
-const navbarLinks = document.querySelectorAll(".nav-menu .nav-link");
-const menuOpenButton = document.querySelector("#menu-open-button");
-const menuCloseButton = document.querySelector("#menu-close-button");
+(() => {
+  const supportsHoverPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  if (!supportsHoverPointer.matches) return;
 
-if (menuOpenButton && menuCloseButton) {
-  menuOpenButton.addEventListener("click", () => {
-    document.body.classList.toggle("show-mobile-menu");
+  const cursor = document.createElement("div");
+  cursor.className = "pizza-cursor";
+  cursor.setAttribute("aria-hidden", "true");
+
+  const image = document.createElement("img");
+  image.src = new URL("images/vegetable-italian-delicious-pizza-slice-png.png", document.currentScript.src).href;
+  image.alt = "";
+  cursor.append(image);
+  document.body.append(cursor);
+  document.body.classList.add("pizza-cursor-enabled");
+
+  document.addEventListener("pointermove", (event) => {
+    if (event.pointerType === "touch") return;
+    cursor.style.left = `${event.clientX}px`;
+    cursor.style.top = `${event.clientY}px`;
+    cursor.classList.add("is-visible");
+  }, { passive: true });
+
+  document.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "touch") return;
+    image.classList.remove("is-spinning");
+    void image.offsetWidth;
+    image.classList.add("is-spinning");
   });
 
-  menuCloseButton.addEventListener("click", () => {
-    document.body.classList.remove("show-mobile-menu");
-  });
-
-  navbarLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      document.body.classList.remove("show-mobile-menu");
-    });
-  });
-}
-
-const thankYouForm = document.querySelector("#thank-you-form");
-const formStatus = document.querySelector("#thank-you-form-status");
-const personalMessage = document.querySelector("#pay-personal-message");
-
-if (thankYouForm && formStatus && personalMessage) {
-  thankYouForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(thankYouForm);
-    const name = String(formData.get("name") || "").trim();
-    const phone = String(formData.get("phone") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const message = String(formData.get("message") || "").trim();
-
-    const whatsappMessage = [
-      "Austin Pizza Rizz - Customer Message",
-      `Name: ${name}`,
-      `Phone: ${phone}`,
-      email ? `Email: ${email}` : "",
-      `Message: ${message}`,
-    ].filter(Boolean).join("\n");
-    const whatsappUrl = `https://wa.me/19567922971?text=${encodeURIComponent(whatsappMessage)}`;
-    const whatsappWindow = window.open(whatsappUrl, "_blank");
-
-    if (!whatsappWindow) {
-      formStatus.textContent = "Your browser blocked the WhatsApp window. Please allow pop-ups and try again, or message us at (956) 792-2971.";
-      return;
-    }
-
-    whatsappWindow.opener = null;
-    personalMessage.textContent = `Thank you, ${name}! We appreciate your support and hope to see you again soon.`;
-    formStatus.textContent = "Your message is ready in WhatsApp. Send it there to get in touch with us.";
-    thankYouForm.reset();
-  });
-}
+  window.addEventListener("pointerleave", () => cursor.classList.remove("is-visible"));
+  window.addEventListener("pointerenter", () => cursor.classList.add("is-visible"));
+})();

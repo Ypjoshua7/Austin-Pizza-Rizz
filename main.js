@@ -247,20 +247,27 @@ setupFilters(
   "menuFilter",
   "menuType",
 );
-setupFilters(
-  document.querySelector(".gallery-section"),
-  "[data-gallery-filter]",
-  ".gallery-item",
-  "galleryFilter",
-  "category",
-);
-
 const gallery = document.querySelector(".gallery-section");
 if (gallery) {
   const modal = gallery.querySelector(".gallery-modal");
   const modalImage = modal?.querySelector(".gallery-modal-image");
-  const modalCaption = modal?.querySelector(".gallery-modal-caption");
+  const modalTitle = modal?.querySelector(".gallery-modal-caption h2");
+  const modalSubtitle = modal?.querySelector(".gallery-modal-caption p");
   const closeButton = modal?.querySelector(".gallery-modal-close");
+  const slider = gallery.querySelector(".gallery-slider");
+  const firstItem = gallery.querySelector(".gallery-item");
+  const scrollDistance = () => {
+    if (!firstItem) return 0;
+    const gap = Number.parseFloat(getComputedStyle(gallery.querySelector(".gallery-list")).gap) || 0;
+    return firstItem.getBoundingClientRect().width + gap;
+  };
+
+  gallery.querySelector("[data-gallery-previous]")?.addEventListener("click", () => {
+    slider?.scrollBy({ left: -scrollDistance(), behavior: "smooth" });
+  });
+  gallery.querySelector("[data-gallery-next]")?.addEventListener("click", () => {
+    slider?.scrollBy({ left: scrollDistance(), behavior: "smooth" });
+  });
 
   gallery.querySelectorAll(".gallery-card").forEach((card) => {
     card.addEventListener("click", () => {
@@ -271,7 +278,8 @@ if (gallery) {
 
       modalImage.src = card.dataset.fullImage || "";
       modalImage.alt = card.dataset.imageAlt || "Pizza photo";
-      if (modalCaption) modalCaption.textContent = modalImage.alt;
+      if (modalTitle) modalTitle.textContent = card.dataset.imageTitle || modalImage.alt;
+      if (modalSubtitle) modalSubtitle.textContent = card.dataset.imageSubtitle || "";
       modal.showModal();
     });
   });

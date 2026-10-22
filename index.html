@@ -9,13 +9,20 @@
     <title>Austin Pizza Rizz | Homemade Pizza in North Austin</title>
     <!-- Favicon png logo -->
     <link rel="icon" type="image/png" href="favicon/fav-AustinPizzaRizzLogo.fav">
-    <link rel="stylesheet" href="style.css?v=3" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=5" />
   </head>
   <body>
     <!-- Header / Navbar -->
     <header>
       <nav class="navbar">
         <a href="#home" class="nav-logo">
+          <img src="images/Austin Pizza Rizz.png" alt="" class="logo-image" />
           <h2 class="logo-text">Austin Pizza Rizz</h2>
         </a>
         <ul class="nav-menu">
@@ -24,10 +31,10 @@
             <a href="#home" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#about" class="nav-link">About</a>
+            <a href="#menu" class="nav-link">Menu</a>
           </li>
           <li class="nav-item">
-            <a href="#menu" class="nav-link">Menu</a>
+            <a href="#about" class="nav-link">About</a>
           </li>
           <li class="nav-item">
             <a href="#testimonials" class="nav-link">Why Us</a>
@@ -71,29 +78,6 @@
           </div>
         </div>
       </section>
-      <!-- About section -->
-      <section class="about-section" id="about">
-        <div class="section-content">
-          <div class="about-image-wrapper">
-            <img src="images/Austin Pizza Rizz.png" alt="Pepperoni and three-cheese pizza" class="about-image" />
-          </div>
-          <div class="about-details">
-            <h2 class="section-title">A Little About Us</h2>
-            <p class="about-subtitle">Neighborhood pizza, made with care in North Austin.</p>
-            <p class="text">Austin Pizza Rizz is a small, home-based pizza business in North Austin, near The Domain. We make homemade pizzas for neighbors looking for an easy, satisfying meal. Check in before ordering for current flavors, availability, and pickup details.</p>
-            <a href="about.html" class="about-link">More about us</a>
-            <div class="about-social">
-              <h3>Follow Austin Pizza Rizz</h3>
-              <div class="about-social-links">
-                <a href="https://www.facebook.com/profile.php?id=61594944796176" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a>
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- Menu section -->
       <section class="menu-section" id="menu">
         <div class="menu-particles" aria-hidden="true">
@@ -102,6 +86,7 @@
         <div class="section-content menu-content">
           <header class="menu-heading">
             <p class="menu-eyebrow">FRESH FROM OUR KITCHEN</p>
+            
             <h2 class="section-title">Menu</h2>
             <p class="menu-subtitle">Explore our homemade pizzas, choose a size, and order your favorite.</p>
             <ol class="menu-purchase-steps" aria-label="How to purchase">
@@ -201,6 +186,32 @@
           </div>
         </div>
       </section>
+
+
+      <!-- About section -->
+      <section class="about-section" id="about">
+        <div class="section-content">
+          <div class="about-image-wrapper">
+            <img src="images/Austin Pizza Rizz.png" alt="Pepperoni and three-cheese pizza" class="about-image" />
+          </div>
+          <div class="about-details">
+            <h2 class="section-title">A Little About Us</h2>
+            <p class="about-subtitle">Neighborhood pizza, made with care in North Austin.</p>
+            <p class="text">Austin Pizza Rizz is a small, home-based pizza business in North Austin, near The Domain. We make homemade pizzas for neighbors looking for an easy, satisfying meal. Check in before ordering for current flavors, availability, and pickup details.</p>
+            <a href="about.html" class="about-link">More about us</a>
+            <div class="about-social">
+              <h3>Follow Austin Pizza Rizz</h3>
+              <div class="about-social-links">
+                <a href="https://www.facebook.com/profile.php?id=61594944796176" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <!-- Customer testimonials -->
       <section class="testimonials-section" id="testimonials">
         <header class="testimonials-heading">
@@ -266,66 +277,64 @@
       </section>
       <!-- Gallery section -->
       <section class="gallery-section" id="gallery">
-        <div class="gallery-particles" aria-hidden="true">
-          <span>✦</span><span>·</span><span>✧</span><span>·</span><span>✦</span><span>·</span><span>✧</span><span>·</span>
-        </div>
         <div class="section-content gallery-content">
           <header class="gallery-heading">
-            <p class="gallery-eyebrow">STRAIGHT FROM OUR OVEN</p>
-            <h2 class="section-title">Our Gallery</h2>
-            <p class="gallery-subtitle">Fresh daily. Made with Austin love.</p>
+            <h2 class="section-title">Gallery</h2>
+            <p class="gallery-subtitle">A look at the pizzas we make with Austin love.</p>
           </header>
-          <div class="gallery-filters" role="group" aria-label="Filter gallery by category">
-            <button class="gallery-filter is-active" type="button" data-gallery-filter="all" aria-pressed="true">All</button>
-            <button class="gallery-filter" type="button" data-gallery-filter="pizza" aria-pressed="false">Pizza</button>
-            <button class="gallery-filter" type="button" data-gallery-filter="pasta" aria-pressed="false">Pasta</button>
-            <button class="gallery-filter" type="button" data-gallery-filter="desserts" aria-pressed="false">Desserts</button>
+          <div class="gallery-slider" role="region" aria-label="Pizza photo gallery" tabindex="0">
+            <ul class="gallery-list">
+            <li class="gallery-item">
+              <figure>
+                <button class="gallery-card" type="button" data-full-image="images/pizza- Pepperoni-three-cheeses.png" data-image-alt="Pepperoni and three-cheese pizza" data-image-title="Three-Cheese Pepperoni" data-image-subtitle="Golden crust. Big Austin flavor." aria-label="View Three-Cheese Pepperoni full screen">
+                  <img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="gallery-image" loading="lazy" />
+                </button>
+                <figcaption class="gallery-caption"><h3>Three-Cheese Pepperoni</h3><p>Golden crust. Big Austin flavor.</p></figcaption>
+              </figure>
+            </li>
+            <li class="gallery-item">
+              <figure>
+                <button class="gallery-card" type="button" data-full-image="images/pizza-with-cheese-and-spinach.png" data-image-alt="Homemade spinach and cheese pizza" data-image-title="Spinach &amp; Cheese" data-image-subtitle="A savory, veggie-forward favorite." aria-label="View Spinach and Cheese pizza full screen">
+                  <img src="images/pizza-with-cheese-and-spinach.png" alt="Homemade spinach and cheese pizza" class="gallery-image" loading="lazy" />
+                </button>
+                <figcaption class="gallery-caption"><h3>Spinach &amp; Cheese</h3><p>A savory, veggie-forward favorite.</p></figcaption>
+              </figure>
+            </li>
+            <li class="gallery-item">
+              <figure>
+                <button class="gallery-card" type="button" data-full-image="images/vegetable-italian-delicious-pizza-slice-png.png" data-image-alt="Italian-style vegetable pizza" data-image-title="Italian Garden Pizza" data-image-subtitle="A colorful, vegetable-topped slice." aria-label="View Italian Garden Pizza full screen">
+                  <img src="images/vegetable-italian-delicious-pizza-slice-png.png" alt="Italian-style vegetable pizza" class="gallery-image" loading="lazy" />
+                </button>
+                <figcaption class="gallery-caption"><h3>Italian Garden Pizza</h3><p>A colorful, vegetable-topped slice.</p></figcaption>
+              </figure>
+            </li>
+            <li class="gallery-item">
+              <figure>
+                <button class="gallery-card" type="button" data-full-image="images/pizza-with-cheese-and-toppings-in-4k-transparency-png.png" data-image-alt="Cheese pizza with assorted toppings" data-image-title="Loaded Toppings Pie" data-image-subtitle="Cheese and a little bit of everything." aria-label="View Loaded Toppings Pie full screen">
+                  <img src="images/pizza-with-cheese-and-toppings-in-4k-transparency-png.png" alt="Cheese pizza with assorted toppings" class="gallery-image" loading="lazy" />
+                </button>
+                <figcaption class="gallery-caption"><h3>Loaded Toppings Pie</h3><p>Cheese and a little bit of everything.</p></figcaption>
+              </figure>
+            </li>
+            <li class="gallery-item">
+              <figure>
+                <button class="gallery-card" type="button" data-full-image="images/pizza-cheese-pepperoni- Cilantro-png.png" data-image-alt="Pepperoni pizza with cilantro" data-image-title="Pepperoni &amp; Cilantro" data-image-subtitle="A fresh herb twist on a classic." aria-label="View Pepperoni and Cilantro pizza full screen">
+                  <img src="images/pizza-cheese-pepperoni- Cilantro-png.png" alt="Pepperoni pizza with cilantro" class="gallery-image" loading="lazy" />
+                </button>
+                <figcaption class="gallery-caption"><h3>Pepperoni &amp; Cilantro</h3><p>A fresh herb twist on a classic.</p></figcaption>
+              </figure>
+            </li>
+            </ul>
           </div>
-          <p class="gallery-empty" role="status" hidden>We’re currently focused on homemade pizza. Check back for pasta and dessert additions!</p>
-          <div class="gallery-slider" aria-label="Pizza gallery">
-          <div class="gallery-list">
-            <article class="gallery-item" data-category="pizza">
-              <button class="gallery-card" type="button" data-full-image="images/pizza- Pepperoni-three-cheeses.png" data-image-alt="Pepperoni and three-cheese pizza" aria-label="View pepperoni three-cheese pizza full screen">
-                <span class="gallery-image-wrap"><img src="images/pizza- Pepperoni-three-cheeses.png" alt="Pepperoni and three-cheese pizza" class="gallery-image" loading="lazy" /></span>
-                <span class="gallery-popular">MOST POPULAR</span>
-                <span class="gallery-rating"><span aria-hidden="true">★★★★★</span><small>HOUSE FAVORITE</small></span>
-                <span class="gallery-card-info"><span class="gallery-category-label">PIZZA · HOUSE SPECIAL</span><strong>Three-Cheese Pepperoni</strong><span>Golden crust. Big Austin flavor.</span></span>
-              </button>
-            </article>
-            <article class="gallery-item" data-category="pizza">
-              <button class="gallery-card" type="button" data-full-image="images/pizza-with-cheese-and-spinach.png" data-image-alt="Homemade spinach and cheese pizza" aria-label="View spinach and cheese pizza full screen">
-                <span class="gallery-image-wrap"><img src="images/pizza-with-cheese-and-spinach.png" alt="Homemade spinach and cheese pizza" class="gallery-image" loading="lazy" /></span>
-                <span class="gallery-rating"><span aria-hidden="true">★★★★★</span><small>GARDEN STYLE</small></span>
-                <span class="gallery-card-info"><span class="gallery-category-label">PIZZA · GARDEN STYLE</span><strong>Spinach &amp; Cheese</strong><span>A savory veggie-forward favorite.</span></span>
-              </button>
-            </article>
-            <article class="gallery-item" data-category="pizza">
-              <button class="gallery-card" type="button" data-full-image="images/vegetable-italian-delicious-pizza-slice-png.png" data-image-alt="Italian-style vegetable pizza" aria-label="View Italian-style vegetable pizza full screen">
-                <span class="gallery-image-wrap"><img src="images/vegetable-italian-delicious-pizza-slice-png.png" alt="Italian-style vegetable pizza" class="gallery-image" loading="lazy" /></span>
-                <span class="gallery-rating"><span aria-hidden="true">★★★★★</span><small>VEGGIE PICK</small></span>
-                <span class="gallery-card-info"><span class="gallery-category-label">PIZZA · VEGETABLE</span><strong>Italian Garden Pizza</strong><span>A colorful vegetable-topped slice.</span></span>
-              </button>
-            </article>
-            <article class="gallery-item" data-category="pizza">
-              <button class="gallery-card" type="button" data-full-image="images/pizza-with-cheese-and-toppings-in-4k-transparency-png.png" data-image-alt="Cheese pizza with assorted toppings" aria-label="View cheese pizza with assorted toppings full screen">
-                <span class="gallery-image-wrap"><img src="images/pizza-with-cheese-and-toppings-in-4k-transparency-png.png" alt="Cheese pizza with assorted toppings" class="gallery-image" loading="lazy" /></span>
-                <span class="gallery-rating"><span aria-hidden="true">★★★★★</span><small>LOADED WITH FLAVOR</small></span>
-                <span class="gallery-card-info"><span class="gallery-category-label">PIZZA · ASSORTED TOPPINGS</span><strong>Loaded Toppings Pie</strong><span>Cheese and a little bit of everything.</span></span>
-              </button>
-            </article>
-            <article class="gallery-item" data-category="pizza">
-              <button class="gallery-card" type="button" data-full-image="images/pizza-cheese-pepperoni- Cilantro-png.png" data-image-alt="Pepperoni pizza with cilantro" aria-label="View pepperoni and cilantro pizza full screen">
-                <span class="gallery-image-wrap"><img src="images/pizza-cheese-pepperoni- Cilantro-png.png" alt="Pepperoni pizza with cilantro" class="gallery-image" loading="lazy" /></span>
-                <span class="gallery-rating"><span aria-hidden="true">★★★★★</span><small>BOLD &amp; FRESH</small></span>
-                <span class="gallery-card-info"><span class="gallery-category-label">PIZZA · PEPPERONI</span><strong>Pepperoni &amp; Cilantro</strong><span>A fresh herb twist on a classic.</span></span>
-              </button>
-            </article>
+          <div class="gallery-controls" aria-label="Gallery controls">
+            <button class="gallery-control" type="button" data-gallery-previous aria-label="Scroll to previous photos">←</button>
+            <p>Swipe or scroll to see more. Select a photo to enlarge.</p>
+            <button class="gallery-control" type="button" data-gallery-next aria-label="Scroll to next photos">→</button>
           </div>
-          </div>
-          <dialog class="gallery-modal" id="gallery-modal" aria-label="Pizza image viewer">
+          <dialog class="gallery-modal" id="gallery-modal" aria-label="Full-screen pizza photo">
             <button class="gallery-modal-close" type="button" aria-label="Close image viewer">×</button>
             <img class="gallery-modal-image" src="" alt="" />
-            <p class="gallery-modal-caption"></p>
+            <div class="gallery-modal-caption"><h2></h2><p></p></div>
           </dialog>
         </div>
       </section>
